@@ -1329,6 +1329,27 @@ html.dark .cta-banner {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.service-detail:hover .service-detail__image {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.service-detail__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.service-detail:hover .service-detail__image img {
+  transform: scale(1.04);
 }
 
 .service-detail__image i {
