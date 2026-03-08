@@ -1,4 +1,20 @@
+// Dark mode — apply before DOM renders to prevent flash
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Dark mode toggle
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  });
 
   // Mobile navigation toggle
   const hamburger = document.querySelector('.header__hamburger');

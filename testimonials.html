@@ -14,6 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function(){var s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
 </head>
 <body>
 
@@ -33,6 +36,10 @@
           <li><a href="testimonials.html" class="active">Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
         <div class="header__cta">
           <a href="tel:0212302415" class="btn btn--primary"><i class="fas fa-phone"></i> Call Now</a>
         </div>
@@ -52,6 +59,11 @@
     <a href="gallery.html">Gallery</a>
     <a href="testimonials.html" class="active">Testimonials</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:none;color:rgba(255,255,255,0.85);font-size:1.15rem;cursor:pointer;padding:12px 0;display:flex;align-items:center;gap:8px;width:100%;border-top:1px solid rgba(255,255,255,0.1);">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <span style="font-size:1.05rem;font-weight:500;">Toggle Dark Mode</span>
+    </button>
     <a href="tel:0212302415" class="btn btn--primary"><i class="fas fa-phone"></i> Call Now</a>
   </nav>
 
@@ -72,9 +84,9 @@
   <section class="section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 50px;" class="fade-up">
-        <div style="display: inline-flex; align-items: center; gap: 20px; background: var(--light-grey); padding: 24px 40px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        <div style="display: inline-flex; align-items: center; gap: 20px; background: var(--section-alt); padding: 24px 40px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
           <div>
-            <div style="font-size: 3rem; font-weight: 800; color: var(--navy); line-height: 1;">5.0</div>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--heading); line-height: 1;">5.0</div>
             <div style="color: #f1c40f; font-size: 1.2rem; margin: 4px 0;">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -132,8 +144,8 @@
       </div>
 
       <!-- Leave a Review -->
-      <div style="text-align: center; margin-top: 50px; padding: 32px; background: var(--light-grey); border-radius: var(--radius-lg);" class="fade-up">
-        <h3 style="color: var(--navy); margin-bottom: 8px;">Had a Great Experience?</h3>
+      <div style="text-align: center; margin-top: 50px; padding: 32px; background: var(--section-alt); border-radius: var(--radius-lg);" class="fade-up">
+        <h3 style="color: var(--heading); margin-bottom: 8px;">Had a Great Experience?</h3>
         <p style="color: var(--charcoal-light); margin-bottom: 16px;">We'd love to hear from you! Leave us a review on Google.</p>
         <a href="https://maps.app.goo.gl/bJ7UKZkLiNxj65kf9" target="_blank" rel="noopener" class="btn btn--primary">
           <i class="fab fa-google"></i> Leave a Review

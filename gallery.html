@@ -14,6 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function(){var s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
 </head>
 <body>
 
@@ -33,6 +36,10 @@
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
         <div class="header__cta">
           <a href="tel:0212302415" class="btn btn--primary"><i class="fas fa-phone"></i> Call Now</a>
         </div>
@@ -52,6 +59,11 @@
     <a href="gallery.html" class="active">Gallery</a>
     <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:none;color:rgba(255,255,255,0.85);font-size:1.15rem;cursor:pointer;padding:12px 0;display:flex;align-items:center;gap:8px;width:100%;border-top:1px solid rgba(255,255,255,0.1);">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <span style="font-size:1.05rem;font-weight:500;">Toggle Dark Mode</span>
+    </button>
     <a href="tel:0212302415" class="btn btn--primary"><i class="fas fa-phone"></i> Call Now</a>
   </nav>
 
@@ -141,7 +153,7 @@
           <div class="gallery-item__overlay"><i class="fas fa-expand"></i></div>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 40px; padding: 24px; background: var(--light-grey); border-radius: var(--radius-lg);" class="fade-up">
+      <div style="text-align: center; margin-top: 40px; padding: 24px; background: var(--section-alt); border-radius: var(--radius-lg);" class="fade-up">
         <p style="color: var(--charcoal-light); margin-bottom: 4px;"><i class="fas fa-camera" style="color: var(--accent); margin-right: 8px;"></i>Photos are updated regularly from our completed jobs.</p>
         <p style="color: var(--charcoal-light); font-size: 0.9rem;">Check out our <a href="https://maps.app.goo.gl/bJ7UKZkLiNxj65kf9" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 600;">Google Maps listing</a> for more photos and reviews.</p>
       </div>
