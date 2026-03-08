@@ -273,10 +273,15 @@ html.dark .logo-icon {
   --pipe-water: #ffe0c2;
 }
 
-.logo-icon svg {
+.logo-icon svg,
+.logo-icon img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
+}
+
+.logo-icon img {
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 
